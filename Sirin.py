@@ -1,3 +1,5 @@
+# coding=utf-8
+
 import telepot
 import pprint
 import time
@@ -9,7 +11,7 @@ def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     print(msg)
     
-    if msg.u'text'=='/ping':
+    if msg.text=='/ping':
         bot.sendMessage(chat_id,'pong!')
 
 
