@@ -7,7 +7,7 @@ bot = telepot.Bot('879508978:AAFr1ngABRI9vP2r2Jl9K58hlCwn4vPinAc')
 
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
-    print(content_type,chat_type,chat_id)
+    print(msg)
     
 MessageLoop(bot, handle).run_as_thread()
 
