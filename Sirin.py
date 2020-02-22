@@ -13,6 +13,9 @@ def handle(msg):
     
     if msg['text']=='/ping':
         bot.sendMessage(chat_id,'boom!')
+        
+    if msg['text']=='/yurui':
+        bot.sendMessage(chat_id,'boom!')
 
 
 MessageLoop(bot, handle).run_as_thread()
