@@ -12,7 +12,7 @@ def handle(msg):
     print(msg)
     
     if msg['text']=='/ping':
-        bot.sendMessage(chat_id,'pong!')
+        bot.sendMessage(chat_id,'boom!')
 
 
 MessageLoop(bot, handle).run_as_thread()
