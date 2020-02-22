@@ -9,8 +9,8 @@ def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     print(msg)
     
-if (msg.text=='/ping'):
-    bot.sendMessage(chat_id,'pong!')
+    if (response.text=='/ping'):
+        bot.sendMessage(chat_id,'pong!')
 
 
 MessageLoop(bot, handle).run_as_thread()
