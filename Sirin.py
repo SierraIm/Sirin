@@ -15,6 +15,9 @@ def handle(msg):
         
     if msg['text']=='/yurui':
         bot.sendMessage(chat_id,'boom!')
+        
+    if msg['text']=='/showdetail':
+        bot.sendMessage(chat_id,msg)
 
 
 MessageLoop(bot, handle).run_as_thread()
