@@ -6,9 +6,11 @@ from telepot.loop import MessageLoop
 
 bot = telepot.Bot('879508978:AAFr1ngABRI9vP2r2Jl9K58hlCwn4vPinAc')
 
+pp = pprint.PrettyPrinter(indent=4)
+
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
-    print(msg)
+    pp.print(msg)
     
     if msg['text']=='/ping':
         bot.sendMessage(chat_id,'boom!')
