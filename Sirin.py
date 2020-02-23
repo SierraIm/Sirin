@@ -10,7 +10,7 @@ pp = pprint.PrettyPrinter(indent=4)
 
 def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
-    pp.print(msg)
+    pp.pprint(msg)
     
     if msg['text']=='/ping':
         bot.sendMessage(chat_id,'boom!')
