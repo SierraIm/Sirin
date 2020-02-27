@@ -21,6 +21,10 @@ def handle(msg):
         
     if msg['text']=='/showdetail':
         bot.sendMessage(chat_id,msg)
+        
+    if msg['text']=='/boom'
+        response=msg['reply_to_message']['chat']['first_name']+msg['reply_to_message']['chat']['last_name']+' boom!'
+        bot.sendMessage(chat_id,response)
 
 
 MessageLoop(bot, handle).run_as_thread()
