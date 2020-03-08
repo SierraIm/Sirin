@@ -23,7 +23,7 @@ def handle(msg):
         bot.sendMessage(chat_id,msg)
         
     if msg['text']=='/boom':
-        response=msg[reply_to_message]['from']['first_name']+' boom!'
+        response=msg['reply_to_message']['from']['first_name']+' boom!'
         bot.sendMessage(chat_id,response)
 
 
