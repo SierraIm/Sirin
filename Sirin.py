@@ -16,7 +16,7 @@ def handle(msg):
     
     text = msg['text']
     
-    wikiPattern = ^/wiki
+    wikiPattern = /wiki
     wikiMatch = re.match(wikiPattern,text)
     
     if text = ='/ping':
