@@ -14,7 +14,7 @@ def handle(msg):
     pp.pprint(msg)
     
     if msg['text']=='/ping':
-        bot.sendMessage(chat_id,'boom!')
+        bot.sendMessage(chat_id,'pong!')
         
     if msg['text']=='/yurui':
         bot.sendMessage(chat_id,'boom!')
