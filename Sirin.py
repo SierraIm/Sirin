@@ -3,6 +3,7 @@
 import telepot
 import time
 import pprint
+import re
 from telepot.loop import MessageLoop
 
 bot = telepot.Bot('879508978:AAFr1ngABRI9vP2r2Jl9K58hlCwn4vPinAc')
@@ -13,18 +14,26 @@ def handle(msg):
     content_type, chat_type, chat_id = telepot.glance(msg)
     pp.pprint(msg)
     
-    if msg['text']=='/ping':
+    text = msg['text]
+    
+    wikiPattern = ^/wiki
+    wikiMatch = re.match(wikiPattern,text)
+    
+    if text = ='/ping':
         bot.sendMessage(chat_id,'pong!')
         
-    if msg['text']=='/yurui':
+    elif text == '/yurui':
         bot.sendMessage(chat_id,'boom!')
         
-    if msg['text']=='/showdetail':
+    elif text == '/showdetail':
         bot.sendMessage(chat_id,msg)
         
-    if msg['text']=='/boom':
+    elif text == 'boom':
         response=msg['reply_to_message']['from']['first_name']+' boom!'
         bot.sendMessage(chat_id,response)
+        
+    elif wikiMatch:
+        bot.sendMessage(chat_id,'roger')
 
 
 MessageLoop(bot, handle).run_as_thread()
