@@ -16,9 +16,6 @@ def handle(msg):
     
     text = msg['text']
     
-    wikiPattern = /wiki
-    wikiMatch = re.match(wikiPattern,text)
-    
     if text = ='/ping':
         bot.sendMessage(chat_id,'pong!')
         
@@ -31,9 +28,6 @@ def handle(msg):
     elif text == 'boom':
         response=msg['reply_to_message']['from']['first_name']+' boom!'
         bot.sendMessage(chat_id,response)
-        
-    elif wikiMatch:
-        bot.sendMessage(chat_id,'roger')
 
 
 MessageLoop(bot, handle).run_as_thread()
