@@ -16,7 +16,7 @@ def handle(msg):
     
     text = msg['text']
     
-    if text = ='/ping':
+    if text =='/ping':
         bot.sendMessage(chat_id,'pong!')
         
     elif text == '/yurui':
