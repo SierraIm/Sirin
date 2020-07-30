@@ -25,7 +25,7 @@ def handle(msg):
     elif text == '/showdetail':
         bot.sendMessage(chat_id,msg)
         
-    elif text == 'boom':
+    elif text == '/boom':
         response=msg['reply_to_message']['from']['first_name']+' boom!'
         bot.sendMessage(chat_id,response)
 
