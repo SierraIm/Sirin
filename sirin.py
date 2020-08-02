@@ -14,7 +14,7 @@ updater = Updater(token=tk)
 dispatcher = updater.dispatcher
 
 def yurui(update,context):
-    context.bot.send_message(chat_id=update.effective_chat.id, text="boom!")
+    context.bot.send_message(chat_id=updater.effective_chat.id, text="boom!")
     
 boom = CommandHandler('yurui', yurui)
 dispatcher.add_handler(boom)    
