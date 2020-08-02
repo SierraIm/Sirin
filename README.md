@@ -1,2 +1,2 @@
 # Sirin
-A Telepot-based bot
+A Telegram bot based by python-telegram-bot
