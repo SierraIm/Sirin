@@ -19,6 +19,4 @@ def yurui(update,context):
 boom = CommandHandler('yurui', yurui)
 dispatcher.add_handler(boom)    
 
-while(1):
-    time.sleep(10)
-
+updater.start_polling()
