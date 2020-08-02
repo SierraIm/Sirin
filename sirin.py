@@ -13,7 +13,7 @@ bot = telegram.Bot(token=tk)
 updater = Updater(token=tk)
 dispatcher = updater.dispatcher
 
-def yurui(update,context):
+def yurui(updater,context):
     context.bot.send_message(chat_id=updater.effective_chat.id, text="boom!")
     
 boom = CommandHandler('yurui', yurui)
