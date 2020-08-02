@@ -10,6 +10,7 @@ tk = '879508978:AAFr1ngABRI9vP2r2Jl9K58hlCwn4vPinAc'
 
 bot = telegram.Bot(token=tk)
 updater = Updater(token=tk)
+dispatcher = updater.dispatcher
 
 while(1):
     time.sleep(10)
