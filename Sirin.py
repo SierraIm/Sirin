@@ -32,6 +32,3 @@ def handle(msg):
 
 MessageLoop(bot, handle).run_as_thread()
 
-while(1):
-    time.sleep(10)
-
