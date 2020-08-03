@@ -13,16 +13,18 @@ tk = '879508978:AAFr1ngABRI9vP2r2Jl9K58hlCwn4vPinAc'
 bot = telegram.Bot(token=tk)
 updater = Updater(token=tk,use_context=True)
 
-'''
+
 #本地测试用
 url = 'sock5://127.0.0.1:10808'
 proxy = telegram.utils.request.Request(proxy_url=url)
 bot = telegram.Bot(token=tk,request=proxy)
 updater = Updater(token=tk, request_kwargs={'proxy_url': 'http://127.0.0.1:10809'},use_context=True)
-'''
 
 dispatcher = updater.dispatcher
 
+
+def start(update,context):
+    context.bot.sendPhoto
 def yurui(update,context):
     context.bot.sendMessage(chat_id=update.effective_chat.id, text="boom!")
     
