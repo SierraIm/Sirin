@@ -14,9 +14,15 @@ updater = Updater(token=tk,use_context=True)
 dispatcher = updater.dispatcher
 
 def yurui(update,context):
-    context.bot.send_message(chat_id=update.effective_chat.id, text="boom!")
+    context.bot.sendMessage(chat_id=update.effective_chat.id, text="boom!")
+    
+def yurui_test(update,context):
+    context.bot.sendSticker(chat_id=update.effective_chat.id,sticker="CAACAgUAAxkBAAIBQV8nvdnbQqb1NLH2Z0PjEH9xvO2qAAJYAAPFBioILE-pYyaFaRYaBA")
     
 boom = CommandHandler('yurui', yurui)
-dispatcher.add_handler(boom)    
+yuruiTest =CommandHandler('yurui_test',yurui_test)
+
+dispatcher.add_handler(boom)   
+dispatcher.add_handler(yuruiTest) 
 
 updater.start_polling()
