@@ -4,7 +4,8 @@
 
 import telegram
 import time
-import telegram.ext
+from telegram.ext import Updater
+from telegram.ext import CommandHandler
 
 tk = '879508978:AAFr1ngABRI9vP2r2Jl9K58hlCwn4vPinAc'
 
