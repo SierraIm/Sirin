@@ -4,7 +4,6 @@
 
 import telegram
 import time
-import requests
 from telegram.ext import Updater
 from telegram.ext import CommandHandler
 
