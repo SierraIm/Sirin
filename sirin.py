@@ -31,7 +31,7 @@ def yurui(update,context):
 def yurui_test(update,context):
     context.bot.sendSticker(chat_id=update.effective_chat.id,sticker="CAACAgUAAxkBAAIBQV8nvdnbQqb1NLH2Z0PjEH9xvO2qAAJYAAPFBioILE-pYyaFaRYaBA")
     
-start = CommandHandler('ping',ping)
+ping = CommandHandler('ping',ping)
 boom = CommandHandler('yurui', yurui)
 yuruiTest = CommandHandler('yurui_test',yurui_test)
 
