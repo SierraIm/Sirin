@@ -26,6 +26,9 @@ dispatcher = updater.dispatcher
 def start(update,context):
     context.bot.sendPhoto(chat_id=update.effective_chat.id,photo=open('resource/0_error.jpg', 'rb'))
     
+def ping(update,context):
+    context.bot.sendPhoto(chat_id=update.effective_chat.id,photo=open('resource/0_error.jpg','rb'))
+    
 def yurui(update,context):
     context.bot.sendMessage(chat_id=update.effective_chat.id, text="boom!")
     
