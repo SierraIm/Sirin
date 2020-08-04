@@ -22,7 +22,7 @@ updater = Updater(token=tk, request_kwargs={'proxy_url': 'http://127.0.0.1:10809
 
 dispatcher = updater.dispatcher
 
-def start(update,context):
+def ping(update,context):
     context.bot.sendPhoto(chat_id=update.effective_chat.id,photo=open('resource/0_error.jpg', 'rb'))
     
 def yurui(update,context):
@@ -31,11 +31,11 @@ def yurui(update,context):
 def yurui_test(update,context):
     context.bot.sendSticker(chat_id=update.effective_chat.id,sticker="CAACAgUAAxkBAAIBQV8nvdnbQqb1NLH2Z0PjEH9xvO2qAAJYAAPFBioILE-pYyaFaRYaBA")
     
-start = CommandHandler('start',start)
+start = CommandHandler('ping',ping)
 boom = CommandHandler('yurui', yurui)
 yuruiTest = CommandHandler('yurui_test',yurui_test)
 
-dispatcher.add_handler(start)
+dispatcher.add_handler(ping)
 dispatcher.add_handler(boom)   
 dispatcher.add_handler(yuruiTest) 
 
