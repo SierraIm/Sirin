@@ -4,7 +4,6 @@
 
 import telegram
 import time
-import requests
 from telegram.ext import Updater
 from telegram.ext import CommandHandler
 
@@ -36,10 +35,12 @@ def yurui_test(update,context):
     context.bot.sendSticker(chat_id=update.effective_chat.id,sticker="CAACAgUAAxkBAAIBQV8nvdnbQqb1NLH2Z0PjEH9xvO2qAAJYAAPFBioILE-pYyaFaRYaBA")
     
 start = CommandHandler('start',start)
+ping = CommandHandler('ping',ping)
 boom = CommandHandler('yurui', yurui)
 yuruiTest = CommandHandler('yurui_test',yurui_test)
 
 dispatcher.add_handler(start)
+dispatcher.add_handler(ping)
 dispatcher.add_handler(boom)   
 dispatcher.add_handler(yuruiTest) 
 
