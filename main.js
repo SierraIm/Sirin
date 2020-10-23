@@ -1,3 +1,7 @@
+const Promise = require('bluebird');
+Promise.config({
+  cancellation: true
+});
 const TelegramBot = require('node-telegram-bot-api')
 const token = '1139441431:AAGK1mff_XD1rRHqSNWsskRjMNWVmSFtH_w'
 const bot = new TelegramBot(token,{pplling:true});
